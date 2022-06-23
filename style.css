@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5;
+
+  --ff-timer: 'Roboto', sans-serif;
+
+  /* rgb(192, 184, 184) */
+  --bg-body: #b7aeaeee;
+  --button-focus: #02799D;
+  --button-focus-bg: white;
+  --fc-primary: hsla(240, 6%, 21%, 1);
+
+}
+
+body{
+  background: var(--bg-body);
+  font-family: var(--ff-timer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19.2rem;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+/* .stop:focus path:nth-child(1), */
+#controls .focus path:nth-child(1),
+#sounds .focus path:nth-child(1){
+  fill: var(--button-focus);
+}
+#sounds .focus path:nth-child(2) {
+  fill: var(--button-focus-bg);
+}
+
+#timer{
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  text-align: center;
+}
+
+#controls{
+  display: flex;
+  justify-content: space-between;
+}
+
+#sounds{
+  display: grid;
+  grid-template-areas: 
+  "forest rain"
+  "coffee bonfire";
+  gap: 3.2rem;
+}
+.forest {
+  grid-area: forest;
+}
+
+.rain{
+  grid-area: rain;
+}
+.coffee{
+  grid-area: coffee;
+}
+.bonfire{
+  grid-area: bonfire;
+}
