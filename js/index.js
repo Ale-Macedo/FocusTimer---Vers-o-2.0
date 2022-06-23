@@ -29,6 +29,7 @@ const soundsForest = new Audio('./sons/Floresta.wav')
 const soundsChuva = new Audio('./sons/Chuva.wav')
 const soundsCoffee = new Audio('./sons/Cafeteria.wav')
 const soundsBonfire = new Audio('./sons/Lareira.wav')
+const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
 
 function sounds() {
   switch (buttonForest.classList.contains('focus')) {
@@ -146,6 +147,7 @@ function countdown() {
     updateDisplay(minutes, 0)
 
     if (finished) {
+      kitchenTimer.play()
       updateDisplay()
       // play()
       return
